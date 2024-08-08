@@ -4,20 +4,22 @@ from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration
 from launch.actions import ExecuteProcess
 from ament_index_python.packages import get_package_share_directory
+from math import pi
 
 def generate_launch_description():
     #caminho para o diretório do pacote
     package_dir = get_package_share_directory('tb3')
 
     #caminho para o arquivo d mundo
-    world_file_name = 'tb3.world'
+    world_file_name = 'tb3_1.world'
     world_files = os.path.join(package_dir, 'worlds',world_file_name)
 
-    sdf_path = os.path.join(get_package_share_directory('tb3'),'models','tb3_model','model.sdf')
+    sdf_path = os.path.join(get_package_share_directory('tb3'),'models','tb3_model1','model.sdf')
 
     # Launch configuration variables specific to simulation
-    x_pose = LaunchConfiguration('x_pose', default='-2')
-    y_pose = LaunchConfiguration('y_pose', default='-1')
+    x_pose = LaunchConfiguration('x_pose', default='-7')
+    y_pose = LaunchConfiguration('y_pose', default='-7')
+    yaw_pose = LaunchConfiguration('y_pose', default= '0.0')
 
     urdf = os.path.join(package_dir, 'urdf', 'tb3.urdf')
 
@@ -36,7 +38,7 @@ def generate_launch_description():
             name="Turtlebot3",
             package='gazebo_ros',
             executable='spawn_entity.py',
-            arguments=["-file",sdf_path, "-entity","tb3_model", "-x", x_pose, "-y", y_pose],
+            arguments=["-file",sdf_path, "-entity","tb3_model1", "-x", x_pose, "-y", y_pose, "-Y", yaw_pose],
             output='screen',
         ),
 

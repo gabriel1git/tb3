@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="turtlebot3_waffle">  
+  <model name="turtlebot3_waffle2">  
   <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
     <link name="base_footprint"/>
@@ -33,7 +33,7 @@
         <pose>-0.064 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://tb3_model/meshes/waffle_base.dae</uri>
+            <uri>model://tb3_model2/meshes/waffle_base.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
@@ -123,7 +123,7 @@
         <pose>-0.064 0 0.121 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://tb3_model/meshes/lds.dae</uri>
+            <uri>model://tb3_model2/meshes/lds.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
@@ -139,7 +139,7 @@
             <horizontal>
               <samples>1080</samples>
               <resolution>0.25</resolution>
-              <min_angle>0.0</min_angle>
+              <min_angle>0.</min_angle>
               <max_angle>6.28</max_angle>
             </horizontal>
           </scan>
@@ -216,7 +216,7 @@
         <pose>0.0 0.144 0.023 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://tb3_model/meshes/tire.dae</uri>
+            <uri>model://tb3_model2/meshes/tire.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
@@ -274,7 +274,7 @@
         <pose>0.0 -0.144 0.023 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://tb3_model/meshes/tire.dae</uri>
+            <uri>model://tb3_model2/meshes/tire.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>

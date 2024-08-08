@@ -9,7 +9,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     package_dir = os.path.join(get_package_share_directory('tb3'))
     #caminho para o arquivo config
-    map_file = os.path.join(package_dir, "config", 'tb3_world_2.yaml')
+    map_file = os.path.join(package_dir, "config", 'tb3_world_ok.yaml')
     params_file = os.path.join(package_dir, "config", 'tb3_nav_params.yaml')
     rviz_config = os.path.join(package_dir, "config", 'tb3_nav.rviz')
 
@@ -36,13 +36,18 @@ def generate_launch_description():
                 'map' :map_file,
                 'params_file':params_file}.items(),
             ),
+        Node(
+            package='tb3',
+            executable='way_points',
+            name='way_points',
+        ),
+
         # Rviz2 bringup
         Node(
             package='rviz2',
             output='screen',
             executable='rviz2',
             name='rviz2_node',
-            arguments=['-d',rviz_config]
+            arguments=['-d',rviz_config],
         ),
-
     ])
