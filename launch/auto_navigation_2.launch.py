@@ -9,23 +9,9 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     package_dir = os.path.join(get_package_share_directory('tb3'))
     #caminho para o arquivo config
-    map_file = os.path.join(package_dir, "config", 'tb3_world_ok.yaml')
+    map_file = os.path.join(package_dir, "config", 'tb3_world_1.yaml')
     params_file = os.path.join(package_dir, "config", 'tb3_nav_params.yaml')
     rviz_config = os.path.join(package_dir, "config", 'tb3_nav.rviz')
-
-    #caminho para o arquivo d mundo
-    world_file_name = 'tb3.world'
-    world_files = os.path.join(package_dir, 'worlds',world_file_name)
-
-    sdf_path = os.path.join(get_package_share_directory('tb3'),'models','tb3_model','model.sdf')
-
-    # Launch configuration variables specific to simulation
-    x_pose = LaunchConfiguration('x_pose', default='-2')
-    y_pose = LaunchConfiguration('y_pose', default='-1')
-
-    urdf = os.path.join(package_dir, 'urdf', 'tb3.urdf')
-
-
 
     return LaunchDescription([
 
@@ -38,8 +24,8 @@ def generate_launch_description():
             ),
         Node(
             package='tb3',
-            executable='way_points',
-            name='way_points',
+            executable='way_points_2',
+            name='way_points_map_2',
         ),
 
         # Rviz2 bringup

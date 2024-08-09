@@ -16,6 +16,7 @@ setup(
   	    (os.path.join('share', package_name,'worlds'), glob('worlds/*')),
   	    (os.path.join('share', package_name,'models/tb3_model1'), glob('models/tb3_model1/*')),
   	    (os.path.join('share', package_name,'models/tb3_model2'), glob('models/tb3_model2/*')),
+  	    (os.path.join('share', package_name,'models/cylinder'), glob('models/cylinder/*')),
   	    (os.path.join('share', package_name,'urdf'), glob('urdf/*')),
   	    (os.path.join('share', package_name,'launch'), glob('launch/*.py')),
   	    (os.path.join('share', package_name,'config'), glob('config/*')),
@@ -30,7 +31,8 @@ setup(
     entry_points={
         'console_scripts': [
             'scan_map=tb3.scan_subscriber:main',
-            'way_points=tb3.nav2_commander:main',
+            'way_points_1=tb3.nav2_commander_1:main',
+            'way_points_2=tb3.nav2_commander_2:main',
         ],
     },
 )

@@ -19,5 +19,12 @@ def generate_launch_description():
             executable='cartographer_occupancy_grid_node',
             name='cr_oc_node'
         ),
+        # Rviz2 bringup
+        Node(
+            package='rviz2',
+            output='screen',
+            executable='rviz2',
+            name='rviz2_node',
+        ),
 
     ])
