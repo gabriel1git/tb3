@@ -21,7 +21,7 @@ Estes pacotes que serão instalados agora, permite a geração de mapas.
 * sudo apt install ros-humble-cartographer
 * sudo apt install ros-humble-cartographer-ros
 
-### Gerar de mapas
+### Preparando ambiente
 
 Após instalar todos os pacotes já estamos preparados para simular a navegação.
 
