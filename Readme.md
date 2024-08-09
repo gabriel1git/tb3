@@ -21,7 +21,7 @@ Estes pacotes que serão instalados agora, permite a geração de mapas.
 * sudo apt install ros-humble-cartographer
 * sudo apt install ros-humble-cartographer-ros
 
-### Preparando ambiente
+## Preparando ambiente
 
 Após instalar todos os pacotes já estamos preparados para simular a navegação.
 
@@ -37,3 +37,20 @@ Mapeie os pacotes e ferramentas do ambiente ROS:
 
 * . install/setup.bash
 
+## Para executar a simulação 1
+
+Será necessário utilizar dois terminais e em ambos vá para o ambiente de trabalho do ROS e mapeie os pacotes e ferramentas conforme acima, em seguida execute o comando abaixo para abrir o gazebo com todo ambiente de simulação.
+
+* ros2 launch tb3 tb3_1.launch.py
+
+No segundo terminal execute o comando abaixo para abrir o Rviz2 e iniciar os algoritmos de controle e planejamento de navegação.
+* ros2 launch auto_navigation_1.launch.py
+
+## Para executar a simulação 2
+
+Será necessário utilizar dois terminais e em ambos vá para o ambiente de trabalho do ROS e mapeie os pacotes e ferramentas conforme acima, em seguida execute o comando abaixo para abrir o gazebo com todo ambiente de simulação.
+
+* ros2 launch tb3 tb3_2.launch.py
+
+No segundo terminal execute o comando abaixo para abrir o Rviz2 e iniciar os algoritmos de controle e planejamento de navegação.
+* ros2 launch auto_navigation_2.launch.py
