@@ -21,15 +21,20 @@ Estes pacotes que serão instalados agora, permite a geração de mapas.
 * sudo apt install ros-humble-cartographer
 * sudo apt install ros-humble-cartographer-ros
 
+Para utilizar as ferramentas do turtlebot3 instale os pacotes abaixo: (será utilizado para gerar mapas)
+
+* sudo apt install ros-humble-turtlebot3-msgs
+* sudo apt install ros-humble-turtlebot3
+
 ## Preparando ambiente
 
 Após instalar todos os pacotes já estamos preparados para simular a navegação.
 
-Vá para o ambiente de trabalhos ROS(na documentação do ROS, este diretório se chama "ros2_ws") o comenaod abaixo irá redirecioná-lo:
+Vá para o ambiente de trabalhos ROS(na documentação do ROS, este diretório se chama "ros2_ws") o comando abaixo irá redirecioná-lo:
 
 * cd ~/ros2_ws 
 
-Em seguida compile os pacotes clonados do github:
+Em seguida compile os pacotes clonados do github para o diretório "src" (ros2_ws/src):
 
 * colcon build
 
